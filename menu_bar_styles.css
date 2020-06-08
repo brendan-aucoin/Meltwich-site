@@ -1,0 +1,111 @@
+/* variables */
+:root{
+    --white:#F5FFFA;
+    --hover:#00BFFF;
+    --transition:0.4s;
+    --line-height:3rem;
+}
+/* reset everything */
+*{
+    margin:0;
+    padding:0;
+}
+
+/* the bar itself */
+.menu-bar{
+    height:3rem;
+    background:#224A6B;
+    color:var(--white);
+    padding:1rem 1rem;
+}
+
+/* the meltwich logo on the left hand side */
+.logo{
+    float:left;
+    text-transform:uppercase;
+    line-height:var(--line-height);
+    margin-left:3rem;
+    font-size:2rem;
+    color:#FF8C00;
+}
+
+/* the menu items on the right */
+.menu{
+    float:right;
+    line-height:var(--line-height);
+}
+
+/* the actual links for the menu */
+.menu a{
+    color:var(--white);
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:0 1rem;
+    transition:var(--transition);
+
+}
+
+/* the burger and the X icon */
+.show-menu-button, .hide-menu-button{
+    transition:var(--transition);
+    font-size:2rem;
+    cursor:pointer;
+    display:none;
+    padding-right:1rem;
+}
+
+.show-menu-button{
+    float:right;
+}
+
+/* hover effects for all buttons and icons*/
+.menu a:hover,.show-menu-button:hover,.hide-menu-button:hover{
+    color:var(--hover);
+}
+
+/* the burger icon or the X icon */
+#menu-burger{
+    position:absolute;
+    visibility:hidden;
+    z-index:-1111;
+}
+
+/* this is for if you want to add more links so they will get compressed more first then go into a burger menu */
+@media (max-width:1000px){
+    .menu a{
+        padding:0 0.5rem;
+    }
+}
+
+/* around mobile where you want to display the burger menu instead of all the links individually */
+@media (max-width:800px){
+    .show-menu-button,.hide-menu-button{
+        display:block;
+        padding-top:0.5rem;    
+    }
+
+    .menu{
+        position:fixed;
+        width:30%;
+        height:100vh;
+        background:#2c2c2c;
+        right:-100%;
+        top:0;
+        text-align:center;
+        padding:5rem 0;
+        line-height:normal;
+        transition:0.45s;
+    }
+
+    .menu a{
+        display:block;
+        padding:1.5rem;
+    }
+
+    .hide-menu-button{
+        position:absolute;
+        top:2rem;
+        right:1.5rem;
+    }
+}
+
