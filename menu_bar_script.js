@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    main();
+    addMenuBar();
     let displayMenu = true;
     $("#menu-burger").click(function(){
         right = displayMenu ? "0" : "-100%";
@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
 });
 
-function main(){
+function addMenuBar(){
     document.getElementById("menu-bar").innerHTML = `
         <h2 class = "logo">Meltwich</h2>
         <button id = "menu-burger"></button>
