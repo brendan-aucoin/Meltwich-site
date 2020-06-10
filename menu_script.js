@@ -4,11 +4,12 @@ $(document).ready(function(){
 function addMenu(){
    const menuContainer = document.getElementById("menu-container");
    for(let i =0; i < foodSections.length;i++){
-       menuContainer.innerHTML += `<h2 class = "food-menu-title">${foodSections[i].title} </h2><hr><br><br>`;
+       menuContainer.innerHTML += `<h2 class = "food-menu-title">${foodSections[i].title} </h2><hr>`;
 
-       menuContainer.innerHTML += `<section class="food-menu" id = "food-menu-${i}">`;
+       menuContainer.innerHTML += `<section class="food-menu" id = "food-menu-section-${i}">`;
+       //for each individual item array
        foodSections[i].items.forEach(item =>{
-           document.getElementById(`food-menu-${i}`).innerHTML += `<div class = "food-menu-item">
+           document.getElementById(`food-menu-section-${i}`).innerHTML += `<div class = "food-menu-item">
            <h3>${item.name}</h3>
            <p>${item.ingredients}</p>
            <p class = "food-price">${item.price} </p>
@@ -100,6 +101,7 @@ const foodSections = [
                 price:"$14.50"
             }
         ]
-    }
+    },
+    
 ];
 

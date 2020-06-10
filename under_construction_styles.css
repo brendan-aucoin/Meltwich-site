@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:#C0C0C0;
+}
+.construction-container{
+    text-align:center;
+    margin-top:3rem;
+}
+
+.construction-container i{
+    font-size:4rem;
+}
+.construction-container p{
+    font-size:3rem;
+}
